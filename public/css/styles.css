@@ -1,0 +1,307 @@
+/*
+
+]=======( Variables )=======[
+
+*/
+
+:root {
+  --amarillo: #eac926;
+  --azul: #03264c;
+  --celeste: #1259c3;
+  --gris-oscuro: #666;
+  --gris-claro: #ebebeb;
+  --verde: #39b54a;
+}
+
+/*
+
+]=======( Estilos generales )=======[
+
+*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--gris-claro);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  font-size: 12px;
+}
+
+.icono-grande {
+  font-size: 2em;
+}
+
+/*
+
+]=======( Header )=======[
+
+*/
+
+header {
+  background-color: var(--amarillo);
+  padding: 1.5rem;
+}
+
+.header-top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-logo {
+  width: 48%;
+}
+
+.header-buscador {
+  width: 48%;
+  display: flex;
+}
+
+.header-buscador-input {
+  width: 90%;
+  min-height: 2rem;
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.header-buscador-boton {
+  background-color: white;
+  width: 10%;
+  height: 2rem;
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding-right: 1rem;
+}
+
+.header-slogan {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.7rem;
+}
+
+.header-navegacion {
+  display: none;
+  margin-top: 1rem;
+}
+
+.header-navegacion-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.flex-izquierda {
+  justify-content: flex-start;
+}
+
+.flex-derecha {
+  justify-content: flex-end;
+}
+
+.burger-menu {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.burger-menu-icon {
+  background-color: var(--celeste);
+  color: white;
+  padding: 13px;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 361px) {
+  .header-logo {
+    width: 30%;
+  }
+
+  .header-buscador {
+    width: 30%;
+  }
+
+  .header-slogan {
+    width: 30%;
+    margin-top: 0;
+  }
+
+  .header-buscador-boton {
+    padding-right: 1rem;
+  }
+
+  .header-navegacion {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .header-slogan {
+    font-size: 16px;
+  }
+}
+
+/*
+
+]=======( Contenido principal )=======[
+
+*/
+
+.home-banner {
+  width: 100%;
+}
+
+main {
+  color: var(--gris-oscuro);
+  width: 90%;
+  margin-inline: auto;
+}
+
+.titular {
+  font-size: 24px;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+@media (min-width: 361px) {
+  .titular {
+    text-align: unset;
+  }
+}
+
+/*
+
+]=======( Productos )=======[
+
+*/
+
+.listado-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.producto {
+  width: 100%;
+  background-color: white;
+}
+
+.producto-imagen {
+  width: 100%;
+}
+
+.producto-detalles {
+  padding: 15px;
+  border-top: var(--gris-claro) 1px solid;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.producto-detalles-delivery {
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--verde);
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: -15px;
+  color: var(--verde);
+}
+
+.producto-detalles-precio {
+  font-size: 18px;
+  color: black;
+}
+
+.producto-detalles-descuento {
+  font-size: 16px;
+  color: var(--verde);
+}
+
+.producto-detalles-descripcion {
+  display: none;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+}
+
+@media (min-width: 361px) {
+  .producto-detalles-descripcion {
+    display: unset;
+  }
+
+  .producto {
+    width: 48%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+}
+
+@media (min-width: 769px) {
+  .listado-productos {
+    gap: 1.5rem;
+  }
+  .producto {
+    width: 22%;
+  }
+}
+
+/*
+
+]=======( Footer )=======[
+
+*/
+
+footer {
+  margin-top: 1.5rem;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  color: var(--gris-oscuro);
+}
+
+.footer-listado-articulos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+}
+
+.footer-articulo-icono {
+  font-size: 2em;
+  color: var(--celeste);
+  margin-bottom: 10px;
+}
+
+.footer-copyright {
+  text-align: left;
+}
